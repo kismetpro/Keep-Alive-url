@@ -1,4 +1,4 @@
-name: Ping URL
+name: Visit URL Every 5 Minutes
 
 on:
   schedule:
@@ -6,8 +6,8 @@ on:
     - cron: '*/5 * * * *'
 
 jobs:
-  ping:
+  visit_url:
     runs-on: ubuntu-latest
     steps:
-      - name: Send request to URL
-        run: curl -s https://electric-fee.onrender.com/ > /dev/null
+      - name: Visit the URL to keep it alive
+        run: curl -s https://electric-fee.onrender.com/
