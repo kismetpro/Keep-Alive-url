@@ -1,0 +1,13 @@
+name: Ping URL
+
+on:
+  schedule:
+    # 每5分钟运行一次
+    - cron: '*/5 * * * *'
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send request to URL
+        run: curl -s https://electric-fee.onrender.com/ > /dev/null
